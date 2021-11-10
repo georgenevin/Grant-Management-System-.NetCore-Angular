@@ -1,0 +1,85 @@
+<div [formGroup]="applicationDetailForm">
+  <div class="grantdropdown">
+    <label for="GrantProgram">GrantProgram<span *ngIf='applicationDetailForm.get("GrantProgram")?.untouched' class="required"> *</span></label>
+    <select class="form-control" formControlName="GrantProgram"  (ngModelChange)="onSelect($event) ">
+        <option disabled>--Select--</option>  
+        <option *ngFor="let program of grantDropDown" [value]="program.grantId">{{program.programName}}</option>
+       </select>
+  
+       <div class="text-danger" *ngIf="applicationDetailForm.get('GrantProgram')?.errors && (applicationDetailForm.get('GrantProgram')?.dirty || applicationDetailForm.get('GrantProgram')?.touched )">  
+        <div *ngIf="applicationDetailForm.get('GrantProgram')?.errors?.required">GrantProgram is Required</div>  
+  </div>
+  
+
+  <h3>Application Details</h3>
+  <div class="form-group">
+      <label for="FirstName">First Name </label>
+      <input type="text" class="form-control" name="FirstName" id="firstname" aria-describedby="emailHelp" placeholder="Enter First Name" formControlName="FirstName" [attr.disabled]="true">
+      <!-- <div class="text-danger" *ngIf="applicationDetailForm.get('FirstName')?.errors && (applicationDetailForm.get('FirstName')?.dirty || applicationDetailForm.get('FirstName')?.touched )">  
+        <div *ngIf="applicationDetailForm.get('FirstName')?.errors?.required">First Name is Required</div> 
+    </div> -->
+  <div class="form-group">
+    <label for="lastname">Last Name</label>
+    <input type="text" class="form-control" id="lastname" aria-describedby="emailHelp" name="LastName" placeholder="Enter Last Name" formControlName="LastName" [attr.disabled]="true">
+    <!-- <div class="text-danger" *ngIf="applicationDetailForm.get('LastName')?.errors && (applicationDetailForm.get('LastName')?.dirty || applicationDetailForm.get('LastName')?.touched )">  
+      <div *ngIf="applicationDetailForm.get('LastName')?.errors?.required">Last Name is Required</div> 
+  </div> -->
+  <div class="form-group">
+      <label for="lastname">Email</label>
+      <input type="email" class="form-control" id="lastname" aria-describedby="emailHelp" placeholder="Enter  Email" formControlName="Email" [attr.disabled]="true">
+      <!-- <div class="text-danger" *ngIf="applicationDetailForm.get('Email')?.errors && (applicationDetailForm.get('Email')?.dirty || applicationDetailForm.get('Email')?.touched )">  
+        <div *ngIf="applicationDetailForm.get('Email')?.errors?.required">Email is Required</div> 
+    </div> -->
+  <div class="form-group">
+    <label for="exampleInputPassword1">Date of Birth <span *ngIf='applicationDetailForm.get("DateofBirth")?.untouched' class="required"> *</span></label>
+    <input type="date" class="form-control" id="dateofbirth" placeholder="Enter date of birth" formControlName="DateofBirth">
+    <div class="text-danger" *ngIf="applicationDetailForm.get('DateofBirth')?.errors && (applicationDetailForm.get('DateofBirth')?.dirty || applicationDetailForm.get('DateofBirth')?.touched )">  
+      <div *ngIf="applicationDetailForm.get('DateofBirth')?.errors?.required">DateofBirth is Required</div> 
+  </div>
+  
+  <div class="form-group">
+      <label for="exampleInputPassword1">Country <span *ngIf='applicationDetailForm.get("Country")?.untouched' class="required"> *</span></label>
+      <select class="form-control" formControlName="Country"  (ngModelChange)="onCountryChange($event) ">
+        <option disabled >--Select--</option>  
+        <option *ngFor="let country of countries" [value]="country.country_Id">{{country.name}}</option>
+       
+       </select>
+       <div class="text-danger" *ngIf="applicationDetailForm.get('Country')?.errors && (applicationDetailForm.get('Country')?.dirty || applicationDetailForm.get('Country')?.touched )">  
+        <div *ngIf="applicationDetailForm.get('Country')?.errors?.required">Country is Required</div> 
+    </div> 
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">State  <span *ngIf='applicationDetailForm.get("State")?.untouched' class="required"> *</span></label>
+      <select class="form-control" formControlName="State"  (change)="onStateChange($event) ">
+        <option disabled>--Select--</option>  
+        <option *ngFor="let state of states" [value]="state.id">{{state.name}}</option>
+       
+       </select>
+    </div>
+    <div class="form-group radio">
+      <div class="radio label">
+        <label for="html">Physically Disabled</label><br>
+      </div>
+   <div class="text-danger" *ngIf="applicationDetailForm.get('PhysicallyDisabled')?.errors && (applicationDetailForm.get('PhysicallyDisabled')?.dirty || applicationDetailForm.get('PhysicallyDisabled')?.touched )">  
+        <div *ngIf="applicationDetailForm.get('PhysicallyDisabled')?.errors?.required">PhysicallyDisabled is Required</div> 
+    </div> 
+    <div class="radio-button">
+      <span>
+        <input  type="radio" id="html" formControlName="PhysicallyDisabled" value="true">Yes
+      </span>
+    <span>
+      <input type="radio" id="css"  formControlName="PhysicallyDisabled" value="false">No
+    </span>
+     
+    </div>
+
+    </div>
+
+  </div>
+
+ 
+   
+
+
+
+

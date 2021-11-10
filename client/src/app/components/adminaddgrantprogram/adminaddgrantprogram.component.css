@@ -1,0 +1,49 @@
+.gpname {
+
+    width: 18%;
+}
+
+.pgcode{
+    width: 18%;
+}
+
+.startdate{
+    width: 12%;
+}
+.enddate
+{
+    width: 10%;
+  
+}
+
+.add-active
+{
+    width: 3%;
+   
+
+
+   
+}
+.add-button
+{
+   
+    width: 16%;
+}
+
+button.btn.btn-adddefault {
+    background-color: #04AA6D;
+    color: white;
+    padding: 10px 10px 10px 10px;
+    margin-left: 2%;
+    border: none;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.ng-valid[required], .ng-valid.required  {
+    border-left: 5px solid #42A948; /* green */
+  }
+  
+  .ng-invalid:not(form)  {
+    border-left: 5px solid #a94442; /* red */
+  }

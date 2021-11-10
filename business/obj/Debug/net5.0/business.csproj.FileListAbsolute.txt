@@ -1,0 +1,33 @@
+C:\Users\qbuser\source\repos\POC-GMS\business\bin\Debug\net5.0\business.deps.json
+C:\Users\qbuser\source\repos\POC-GMS\business\bin\Debug\net5.0\business.dll
+C:\Users\qbuser\source\repos\POC-GMS\business\bin\Debug\net5.0\ref\business.dll
+C:\Users\qbuser\source\repos\POC-GMS\business\bin\Debug\net5.0\business.pdb
+C:\Users\qbuser\source\repos\POC-GMS\business\bin\Debug\net5.0\data.dll
+C:\Users\qbuser\source\repos\POC-GMS\business\bin\Debug\net5.0\models.dll
+C:\Users\qbuser\source\repos\POC-GMS\business\bin\Debug\net5.0\data.pdb
+C:\Users\qbuser\source\repos\POC-GMS\business\bin\Debug\net5.0\models.pdb
+C:\Users\qbuser\source\repos\POC-GMS\business\obj\Debug\net5.0\business.csproj.AssemblyReference.cache
+C:\Users\qbuser\source\repos\POC-GMS\business\obj\Debug\net5.0\business.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\qbuser\source\repos\POC-GMS\business\obj\Debug\net5.0\business.AssemblyInfoInputs.cache
+C:\Users\qbuser\source\repos\POC-GMS\business\obj\Debug\net5.0\business.AssemblyInfo.cs
+C:\Users\qbuser\source\repos\POC-GMS\business\obj\Debug\net5.0\business.csproj.CoreCompileInputs.cache
+C:\Users\qbuser\source\repos\POC-GMS\business\obj\Debug\net5.0\business.dll
+C:\Users\qbuser\source\repos\POC-GMS\business\obj\Debug\net5.0\ref\business.dll
+C:\Users\qbuser\source\repos\POC-GMS\business\obj\Debug\net5.0\business.pdb
+C:\Nevin Study\POC-GMS\business\bin\Debug\net5.0\business.deps.json
+C:\Nevin Study\POC-GMS\business\bin\Debug\net5.0\business.dll
+C:\Nevin Study\POC-GMS\business\bin\Debug\net5.0\ref\business.dll
+C:\Nevin Study\POC-GMS\business\bin\Debug\net5.0\business.pdb
+C:\Nevin Study\POC-GMS\business\bin\Debug\net5.0\data.dll
+C:\Nevin Study\POC-GMS\business\bin\Debug\net5.0\models.dll
+C:\Nevin Study\POC-GMS\business\bin\Debug\net5.0\data.pdb
+C:\Nevin Study\POC-GMS\business\bin\Debug\net5.0\models.pdb
+C:\Nevin Study\POC-GMS\business\obj\Debug\net5.0\business.csproj.AssemblyReference.cache
+C:\Nevin Study\POC-GMS\business\obj\Debug\net5.0\business.GeneratedMSBuildEditorConfig.editorconfig
+C:\Nevin Study\POC-GMS\business\obj\Debug\net5.0\business.AssemblyInfoInputs.cache
+C:\Nevin Study\POC-GMS\business\obj\Debug\net5.0\business.AssemblyInfo.cs
+C:\Nevin Study\POC-GMS\business\obj\Debug\net5.0\business.csproj.CoreCompileInputs.cache
+C:\Nevin Study\POC-GMS\business\obj\Debug\net5.0\business.dll
+C:\Nevin Study\POC-GMS\business\obj\Debug\net5.0\ref\business.dll
+C:\Nevin Study\POC-GMS\business\obj\Debug\net5.0\business.pdb
+C:\Nevin Study\POC-GMS\business\obj\Debug\net5.0\business.csproj.CopyComplete

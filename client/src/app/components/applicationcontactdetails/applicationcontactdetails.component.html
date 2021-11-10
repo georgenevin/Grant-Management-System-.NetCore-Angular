@@ -1,0 +1,45 @@
+
+<div [formGroup]="contactDetail">
+  <h3>Contact Details</h3>
+  <div class="form-group">
+    <label for="address">Address <span *ngIf='contactDetail.get("Address")?.untouched' class="required"> *</span></label>
+    <input type="text" class="form-control" id="address" placeholder="Enter Address" formControlName="Address">
+    <div class="text-danger" *ngIf="contactDetail.get('Address')?.errors && (contactDetail.get('Address')?.dirty || contactDetail.get('Address')?.touched )">  
+      <div *ngIf="contactDetail.get('Address')?.errors?.required">Address is Required</div>  
+  </div> 
+  </div>
+  <div class="form-group">
+    <label for="address">City <span *ngIf='contactDetail.get("City")?.untouched' class="required"> *</span></label>
+    <input type="text" class="form-control" id="city" placeholder="Enter City" formControlName="City">
+    <div class="text-danger" *ngIf="contactDetail.get('City')?.errors && (contactDetail.get('City')?.dirty || contactDetail.get('City')?.touched )">  
+      <div *ngIf="contactDetail.get('City')?.errors?.required">City is Required</div>  
+  </div> 
+  </div>
+  <div class="form-group">
+    <label for="address">Postal Code <span *ngIf='contactDetail.get("PostalCode")?.untouched' class="required"> *</span></label>
+    <input type="text" class="form-control" id="code" placeholder="Enter Postal City" formControlName="PostalCode">
+    <div class="text-danger" *ngIf="contactDetail.get('PostalCode')?.errors && (contactDetail.get('PostalCode')?.dirty || contactDetail.get('PostalCode')?.touched )">  
+      <div *ngIf="contactDetail.get('PostalCode')?.errors?.required">PostalCode is Required</div>  
+      <div *ngIf="contactDetail.get('PostalCode')?.errors?.pattern">Please Enter number</div>  
+  </div> 
+  </div>
+  <div class="form-group">
+    <label for="address">Mobile <span *ngIf='contactDetail.get("Mobile")?.untouched' class="required"> *</span></label>
+    <input type="text" class="form-control" id="mobile" placeholder="Enter Mobile" formControlName="Mobile">
+    <div class="text-danger" *ngIf="contactDetail.get('Mobile')?.errors && (contactDetail.get('Mobile')?.dirty || contactDetail.get('Mobile')?.touched )">  
+      <div *ngIf="contactDetail.get('Mobile')?.errors?.required">Mobile Number is Required</div>  
+      <div *ngIf="contactDetail.get('Mobile')?.errors?.pattern">Please Enter number</div>  
+  </div> 
+  </div>
+  <div class="form-group">
+    <label for="address">Phone <span *ngIf='contactDetail.get("Phone")?.untouched' class="required"> *</span></label>
+    <input type="text" class="form-control" id="phone" placeholder="Enter Phone"  formControlName="Phone">
+    <div class="text-danger" *ngIf="contactDetail.get('Phone')?.errors && (contactDetail.get('Phone')?.dirty || contactDetail.get('Phone')?.touched )">  
+      <div *ngIf="contactDetail.get('Phone')?.errors?.required">Phone is Required</div>  
+      <div *ngIf="contactDetail.get('Phone')?.errors?.pattern">Please Enter number</div>  
+      
+  </div> 
+  </div>
+
+</div>
+

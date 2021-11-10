@@ -1,0 +1,33 @@
+
+    <tr>
+        <td class="dlt-prgname">
+            <input  class="form-control" type="text" [(ngModel)]="program.programName" />
+            <p *ngIf="validationError.isValidprogramName">Enter program name</p>
+        </td>
+        <td class="dlt-prgncode">
+            <input  class="form-control" type="text" [(ngModel)]="program.programCode" />
+            <p *ngIf="validationError.isValidprogramCode">Enter program code</p>
+        </td>
+        <td class="dlt-strtdate">
+            <input  class="form-control" type="date" [(ngModel)]="program.startDate"  />
+        </td>
+        <td class="dlt-enddate">
+            <input  class="form-control" type="date" [(ngModel)]="program.endDate"  />
+            <p *ngIf="error.isError">{{error.errorMessage}}</p>
+        </td>
+        <td class="dlt-checkbox">
+          
+        <input type="checkbox" class="form-control checkbox" [(ngModel)]="program.status" >Active
+        </td>
+        <td class="dlt-status">
+            <button class="btn btn-deldefault"  type="button" (click)="deleteGrant(program)"  ><i class="fa fa-trash" aria-hidden="true"></i></button>
+        </td>
+        <td class="dlt-upd">
+            <button class="btn btn-deldefault"  type="submit" (click)="updateGrant(program)"><i class="fa fa-floppy-o" aria-hidden="true"></i></button>
+        </td>
+    
+    </tr>
+
+ 
+
+

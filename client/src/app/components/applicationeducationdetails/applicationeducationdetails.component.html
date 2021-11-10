@@ -1,0 +1,77 @@
+<div class="appeducationdetails" >
+    <h1>Educational Details</h1>
+    <div class="container-lg" >
+        <div class="table-responsive">
+            <div class="table-wrapper">
+                <div class="table-title">
+                    <div class="row">
+                        <div class="col-sm-8"></div>
+                        <div class="col-sm-4">
+                            <button type="button" class="btn btn-info add-new" (click)="addNewRow()"><i
+                                    class="fa fa-plus"></i> Add New</button>
+                        </div>
+                    </div>
+                </div>
+                <table class="table table-bordered" >
+                    <thead>
+                        <tr>
+                            <th>Course Name</th>
+                            <th>Country</th>
+                            <th>Institution Name</th>
+                            <th>Year of Completion</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody [formGroup]="educationDetail">
+                    
+                        <ng-container formArrayName="education">
+
+                            <tr *ngFor="let skill of tableRowArray.controls; let i=index">
+                                <ng-container [formGroupName]="i">
+                                    <td>
+                                        <input type="text" class="form-control" formControlName="courseName" id="coursename">
+                                        <div class="text-danger" *ngIf="skill.get('courseName')?.errors && (skill.get('courseName')?.dirty || skill.get('courseName')?.touched)">  
+                                            <div *ngIf="skill.get('courseName')?.errors?.required">Name is Required</div>  
+                                        </div>    
+                                      
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control" formControlName="country" id="country">
+                                        <div class="text-danger" *ngIf="skill.get('country')?.errors && (skill.get('country')?.dirty || skill.get('country')?.touched)">  
+                                            <div *ngIf="skill.get('country')?.errors?.required">Country is Required</div>  
+                                        </div>  
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control" formControlName="institutionName" id="institutionName">
+                                        <div class="text-danger" *ngIf="skill.get('institutionName')?.errors && (skill.get('institutionName')?.dirty || skill.get('institutionName')?.touched)">  
+                                            <div *ngIf="skill.get('institutionName')?.errors?.required">Institution Name is Required</div>  
+                                        </div>  
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control" formControlName="yearofCompleting" id="yearofCompleting">
+                                        <div class="text-danger" *ngIf="skill.get('yearofCompleting')?.errors && (skill.get('yearofCompleting')?.dirty || skill.get('yearofCompleting')?.touched)">  
+                                            <div *ngIf="skill.get('yearofCompleting')?.errors?.required">Year of completion is Required</div>  
+                                            <div *ngIf="skill.get('yearofCompleting')?.errors?.pattern">Year of completion is number</div>  
+                                        </div>  
+                                    </td>
+                                    <td>
+                                       
+                                        <a class="edit"  data-toggle="tooltip" data-original-title="Edit" (click)="onUpdate(skill,i)"><i class="fa fa-pencil"></i></a>
+                                        <a class="delete"  data-toggle="tooltip" data-original-title="Delete" (click)="onDeleteRow($event)"><i class="fa fa-trash"></i></a>
+                                    </td>
+
+                                </ng-container>
+                              
+                            </tr>
+
+
+                        </ng-container>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+</div>

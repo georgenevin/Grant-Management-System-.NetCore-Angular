@@ -1,0 +1,55 @@
+<app-navigation></app-navigation>
+<div class="container">
+  <div class="register">
+    <h1>Register</h1>
+    <h6>Sign up for applying grant programs</h6>
+
+    <form [formGroup]='RegisterForm'  (ngSubmit)="Register()">
+        <div class="form-group" >
+            <label for="email">Email<span *ngIf='RegisterForm.get("Email")?.untouched' class="required"> *</span></label>
+            <input type="email"
+            [class.is-invalid]='RegisterForm.get("Email")?.errors && RegisterForm.get("Email")?.touched'
+             class="form-control" id="email" 
+              placeholder="Enter Username"
+            formControlName='Email'>
+            <div  *ngIf='RegisterForm.get("Email")?.hasError("required")'  class="invalid-feedback">Please enter Email</div>
+            <div  *ngIf='RegisterForm.get("Email")?.hasError("email")'  class="invalid-feedback">Please  email in correct format</div>
+          </div>
+        <div class="form-group">
+            <label for="FirstName">First Name<span *ngIf='RegisterForm.get("FirstName")?.untouched' class="required"> *</span></label>
+            <input 
+              type="text"
+              [class.is-invalid]='RegisterForm.get("FirstName")?.errors && RegisterForm.get("FirstName")?.touched'
+             class="form-control" id="firstname" 
+              formControlName='FirstName' placeholder="Enter First Name">
+              <div  *ngIf='RegisterForm.get("FirstName")?.hasError("required")'  class="invalid-feedback">Please enter First Name</div>
+          </div>
+        <div class="form-group">
+          <label for="Lastname">Last Name <span *ngIf='RegisterForm.get("LastName")?.untouched' class="required"> *</span></label>
+          <input
+           type="text"
+           [class.is-invalid]='RegisterForm.get("LastName")?.errors && RegisterForm.get("LastName")?.touched'
+            class="form-control" id="lastname" formControlName='LastName' placeholder="Enter Last Name">
+           <div  *ngIf='RegisterForm.get("LastName")?.hasError("required")'  class="invalid-feedback">Please enter Last Name</div>
+        </div>
+    
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password  <span *ngIf='RegisterForm.get("Password")?.untouched' class="required"> *</span></label>
+          <input type="password" class="form-control" id="password" placeholder="Password" formControlName='Password' >
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Confirm Password  <span *ngIf='RegisterForm.get("ConfirmPassword")?.untouched' class="required"> *</span></label>
+            <input type="password"
+            [class.is-invalid]='RegisterForm.get("ConfirmPassword")?.errors && RegisterForm.get("ConfirmPassword")?.touched'
+            class="form-control" id="confrmpassword" formControlName='ConfirmPassword'  placeholder="Confirm Password">
+            <div  *ngIf='RegisterForm.get("ConfirmPassword")?.hasError("isMatching")'  class="invalid-feedback">Password not matching</div>
+          </div>
+  
+        <button type="submit" class="btn btn-primary" >Register</button>
+      
+      
+      </form>
+
+  </div>
+
+</div>

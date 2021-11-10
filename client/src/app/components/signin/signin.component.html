@@ -1,0 +1,48 @@
+
+<div class="login">
+ 
+
+
+  <div class="imgcontainer">
+    <img src="../../../assets/img_avatar2.png" alt="Avatar" class="avatar">
+  </div>
+
+  <div class="container">
+    <form [formGroup]='LoginForm' (ngSubmit)="login()">
+      <label for="uname"><b>Username</b><span *ngIf='LoginForm.get("Email")?.untouched' class="required" > *</span></label>
+      <input 
+        [class.is-invalid]='LoginForm.get("Email")?.errors && LoginForm.get("Email")?.touched'
+        type="email"
+        placeholder="Enter Username"
+        formControlName='Email' required>
+        <div  *ngIf='LoginForm.get("Email")?.hasError("required")'  class="invalid-feedback">Please enter username</div>
+        <div  *ngIf='LoginForm.get("Email")?.hasError("email")'  class="invalid-feedback">Please  email in correct format</div>
+  
+      <label for="psw"><b>Password</b><span class="required" *ngIf='LoginForm.get("Password")?.untouched'> *</span></label>
+      <input
+      [class.is-invalid]='LoginForm.get("Password")?.errors && LoginForm.get("Password")?.touched '
+       type="password"
+        placeholder="Enter Password" 
+        formControlName='Password'
+         required>
+       
+         <div>
+          <div  *ngIf='LoginForm.get("Password")?.hasError("required")'
+          
+          class="invalid-feedback"  >Please enter password</div>
+         </div>
+         
+       
+      
+        
+      <button type="submit" [disabled]="!LoginForm.valid" (click)="loginFormhandler()">Login</button>
+    
+      <div class="signup">
+        <a routerLink='/SignUp' >Sign Up</a>
+      </div>
+    
+    </form>
+  </div>
+
+</div>
+

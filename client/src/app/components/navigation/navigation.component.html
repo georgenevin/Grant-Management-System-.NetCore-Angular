@@ -1,0 +1,13 @@
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container">
+        <a class="navbar-brand" routerLink=''>Grant Management System</a>
+        <a *ngIf="showReviewPage && currentUrl" class="navbar-myprogram" routerLink="appliedprograms" >My Programs</a>
+        
+    </div>
+    <div class="logout"  *ngIf="showCurrentuser"  >
+      <div class="logout-button"   >
+        <button type="button" (click)="LogOut()">Logout</button>
+      </div>
+    </div>
+  
+  </nav>

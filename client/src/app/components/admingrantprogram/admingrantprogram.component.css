@@ -1,0 +1,40 @@
+thead .grantprogram
+{
+    width: 19%;
+}
+
+thead .programcode
+{
+    width: 18%;
+}
+
+thead .startdate
+{
+    width: 21%;
+}
+thead .enddate
+{
+    width: 21.5%;
+}
+
+
+thead .status
+{
+    width: 4%;
+}
+
+thead .update
+{
+    width: 20%;
+}
+
+thead .delete
+{
+    width: 20%;
+}
+
+.addgant-page{
+   
+    margin-top: 0.5%;
+    margin-bottom: 2%;
+}

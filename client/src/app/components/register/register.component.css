@@ -1,0 +1,15 @@
+.register
+{
+   margin-top: 50px;
+}
+
+label{
+    float: left;
+ }
+
+ button.btn.btn-primary
+ {
+    background-color: #04AA6d;
+    cursor: pointer;
+ }
+

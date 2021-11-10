@@ -1,0 +1,10 @@
+label{
+    float: left;
+ }
+ 
+ .form-group.radio {
+    display: flex;
+    justify-content:space-between;
+  
+}
+ 

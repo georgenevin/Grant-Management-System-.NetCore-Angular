@@ -1,0 +1,61 @@
+<div class="appeducationdetails" >
+    <h1>Review Applications</h1>
+    <div class="container-lg" >
+        <div class="table-responsive">
+            <div class="table-wrapper">
+                <div class="table-title">
+                    <div class="row">
+                        <div class="col-sm-8"></div>
+                        <div class="col-sm-4">
+                          
+                        </div>
+                    </div>
+                </div>
+                <table class="table table-bordered" bgcolor="#f1f1f1">
+                    <thead>
+                        <tr>
+                            <th>Applicant Name</th>
+                            <th>Program Code</th>
+                            <th>Country</th>
+                            <th>Application Status</th>
+                            <th>Review Status</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody >
+                        <ng-container *ngIf="applicantReviews">
+                            <tr  *ngFor="let applicant of applicantReviews | paginate: { itemsPerPage: 5, currentPage: p }">
+                                <td>{{applicant.applicantName}}</td>
+                                <td>{{applicant.programCode}}</td>
+                                <td>{{applicant.country}}</td>
+                                <td>{{applicant.applicationStatus}}</td>
+                                <td>
+                                    <select  class="form-control" [(ngModel)]="applicant.reviewerStatus" >
+                                        <option disabled >--Select--</option>  
+                                        <option  value="true">Approved
+                                        </option>
+                                        <option  value="false">Rejected
+                                        </option>
+                                    </select>
+                               
+                                
+                                </td>
+                                <td>
+                                    <button type="button" class="btn btn-info add-new" (click)="saveReview(applicant)"><i  class="fa fa-floppy-o"></i></button>
+                                </td>
+                            </tr>
+                          
+                        </ng-container>
+                      
+                    </tbody>
+                </table>
+                <div class="table-cont">
+                    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+                </div>
+          
+            </div>
+        </div>
+    </div>
+
+
+</div>

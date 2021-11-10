@@ -1,0 +1,27 @@
+<table class="table table-striped table-bordered">
+    <thead>
+        <thead>
+            <tr>
+                <th class="grantprogram">Grant Program Name</th>
+                <th class="programcode">Program Code</th>
+                <th class="startdate">Start Date</th>
+                <th class="enddate">End Date</th>
+                <th class="status">Status</th>
+                <th class="update"></th>
+             
+            </tr>
+        </thead>
+  
+  
+    <tbody>
+     
+        <app-admindeletegrantprogram *ngFor="let program of programsList | paginate: { itemsPerPage: 4, currentPage: p }" [program]="program"  (deleteProgram)="deleteGrant($event)" (updateProgram)="updateGrantPrgm($event)"></app-admindeletegrantprogram>
+        <app-adminaddgrantprogram (addProgramEvent)="AddGrant($event)"></app-adminaddgrantprogram>
+        
+  
+    </tbody>
+ 
+</table>
+<div class="addgant-page">
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>

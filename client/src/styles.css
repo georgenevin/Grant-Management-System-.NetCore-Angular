@@ -1,0 +1,40 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~ag-grid-community/dist/styles/ag-grid.css";
+@import "~ag-grid-community/dist/styles/ag-theme-balham.css";
+#toast-container > div {
+    opacity:1;
+  }
+
+  .toast-top-center {
+    top: 30px;
+}
+
+.toast {
+    font-size: initial !important;
+    border: initial !important;
+    backdrop-filter: blur(0) !important;
+  }
+  .toast-success {
+    background-color: #51A351 !important;
+  }
+  .toast-error {
+    background-color: #BD362F !important;
+  }
+  .toast-info {
+    background-color: #2F96B4 !important;
+  }
+  .toast-warning {
+    background-color: #F89406 !important;
+  }
+  .required
+  {
+    color: red;
+  }
+
+  .ngx-pagination .current {
+
+
+    background: #04AA6D !important;
+  
+    cursor: pointer;
+}

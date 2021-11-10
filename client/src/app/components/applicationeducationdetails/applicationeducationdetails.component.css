@@ -1,0 +1,29 @@
+table tr { 
+
+   overflow:hidden;
+  
+   
+}
+
+button.btn.btn-info.add-new {
+    float: right;
+    margin-bottom: 10px;
+    background-color: #04AA6d;
+    cursor: pointer;
+}
+
+i.fa.fa-pencil
+{
+    color:#04AA6d;
+    margin-right:5px;
+}
+
+i.fa.fa-trash
+{
+    color:#04AA6d;
+}
+
+table.table.table-bordered{
+
+   overflow: hidden;
+}

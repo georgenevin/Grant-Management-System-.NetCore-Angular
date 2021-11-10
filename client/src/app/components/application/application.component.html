@@ -1,0 +1,21 @@
+
+
+<app-navigation></app-navigation>
+<div class="container">
+  <div class="application">
+
+    
+    <form [formGroup]="applicantForm" (ngSubmit)="submitForm()"  >
+              <div class="applicants-section">
+                <app-applicationapplicantdetails formGroupName="applicationDetail"></app-applicationapplicantdetails>
+                <app-applicationcontactdetails formGroupName="contactDetail"></app-applicationcontactdetails> 
+              </div>
+         
+              <app-applicationeducationdetails formGroupName="educationDetail"> </app-applicationeducationdetails>
+           
+              <button type="submit" class="btn btn-primary" [disabled]="!applicantForm.valid">Submit</button>
+        </form>
+  </div>
+    
+  </div>
+  
