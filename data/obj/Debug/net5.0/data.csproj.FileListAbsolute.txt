@@ -33,4 +33,3 @@ C:\Nevin Study\POC-GMS\data\obj\Debug\net5.0\data.dll
 C:\Nevin Study\POC-GMS\data\obj\Debug\net5.0\ref\data.dll
 C:\Nevin Study\POC-GMS\data\obj\Debug\net5.0\data.pdb
 C:\Nevin Study\POC-GMS\data\obj\Debug\net5.0\data.genruntimeconfig.cache
-C:\Nevin Study\POC-GMS\data\obj\Debug\net5.0\data.csproj.CopyComplete
