@@ -19,7 +19,6 @@ C:\Nevin Study\POC-GMS\models\bin\Debug\net5.0\models.runtimeconfig.dev.json
 C:\Nevin Study\POC-GMS\models\bin\Debug\net5.0\models.dll
 C:\Nevin Study\POC-GMS\models\bin\Debug\net5.0\ref\models.dll
 C:\Nevin Study\POC-GMS\models\bin\Debug\net5.0\models.pdb
-C:\Nevin Study\POC-GMS\models\obj\Debug\net5.0\models.csproj.AssemblyReference.cache
 C:\Nevin Study\POC-GMS\models\obj\Debug\net5.0\models.GeneratedMSBuildEditorConfig.editorconfig
 C:\Nevin Study\POC-GMS\models\obj\Debug\net5.0\models.AssemblyInfoInputs.cache
 C:\Nevin Study\POC-GMS\models\obj\Debug\net5.0\models.AssemblyInfo.cs
