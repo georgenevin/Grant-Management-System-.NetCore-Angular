@@ -1,40 +1,47 @@
 <app-navigation></app-navigation>
-<table class="table table-bordered"  bgcolor="#f1f1f1">
-    <thead>
-        <tr>
-            <th>Applicant Name</th>
-            <th>Program Code</th>
-            <th>Country</th>
-            <th>Application Status</th>
-            <th>Review Status</th>
-           
-        </tr>
-    </thead>
-    <tbody >
-        <ng-container *ngIf="userReviews.length">
-            <tr  *ngFor="let applicant of userReviews | paginate: { itemsPerPage: 5, currentPage: p }">
-                <td>{{applicant.applicantName}}</td>
-                <td>{{applicant.programCode}}</td>
-                <td>{{applicant.country}}</td>
-                <td>{{applicant.applicationStatus}}</td>
-                <td *ngIf="!applicant.reviewerStatus && applicant.applicationStatus=='Completed'">
-                     Rejected
-                </td>
-                <td *ngIf="applicant.reviewerStatus && applicant.applicationStatus=='Completed'">
-                    Approved
-               </td>
-               <td *ngIf="!applicant.reviewerStatus && applicant.applicationStatus=='Submitted'">
-                Pending
-           </td>
-          
-              
+
+<input type="text" placeholder="search any programcode,country,applicantname" class="search" (input)="searchField($event)">
+<div class="table-content">
+   
+    <table class="table table-bordered"  bgcolor="#f1f1f1">
+  
+        <thead>
+            <tr>
+                <th>Applicant Name</th>
+                <th>Program Code</th>
+                <th>Country</th>
+                <th>Application Status</th>
+                <th>Review Status</th>
                
             </tr>
-         
-        </ng-container>
-  
-       
-    </tbody>
-  
-</table>
+        </thead>
+        <tbody >
+            <ng-container *ngIf="userReviews.length">
+                <tr  *ngFor="let applicant of userReviews | paginate: { itemsPerPage: 5, currentPage: p }">
+                    <td>{{applicant.applicantName}}</td>
+                    <td>{{applicant.programCode}}</td>
+                    <td>{{applicant.country}}</td>
+                    <td>{{applicant.applicationStatus}}</td>
+                    <td *ngIf="!applicant.reviewerStatus && applicant.applicationStatus=='Completed'">
+                         Rejected
+                    </td>
+                    <td *ngIf="applicant.reviewerStatus && applicant.applicationStatus=='Completed'">
+                        Approved
+                   </td>
+                   <td *ngIf="!applicant.reviewerStatus && applicant.applicationStatus=='Submitted'">
+                    Pending
+               </td>
+              
+                  
+                   
+                </tr>
+             
+            </ng-container>
+      
+           
+        </tbody>
+      
+    </table>
+</div>
+
 <pagination-controls (pageChange)="p = $event"></pagination-controls>

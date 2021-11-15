@@ -1,13 +1,16 @@
 <div [formGroup]="applicationDetailForm">
   <div class="grantdropdown">
-    <label for="GrantProgram">GrantProgram<span *ngIf='applicationDetailForm.get("GrantProgram")?.untouched' class="required"> *</span></label>
-    <select class="form-control" formControlName="GrantProgram"  (ngModelChange)="onSelect($event) ">
-        <option disabled>--Select--</option>  
-        <option *ngFor="let program of grantDropDown" [value]="program.grantId">{{program.programName}}</option>
-       </select>
-  
-       <div class="text-danger" *ngIf="applicationDetailForm.get('GrantProgram')?.errors && (applicationDetailForm.get('GrantProgram')?.dirty || applicationDetailForm.get('GrantProgram')?.touched )">  
-        <div *ngIf="applicationDetailForm.get('GrantProgram')?.errors?.required">GrantProgram is Required</div>  
+    <div class="selectgrant">
+      <label for="GrantProgram">GrantProgram<span *ngIf='applicationDetailForm.get("GrantProgram")?.untouched' class="required"> *</span></label>
+      <select class="form-control" formControlName="GrantProgram"  (ngModelChange)="onSelect($event) ">
+          <option disabled>--Select--</option>  
+          <option *ngFor="let program of grantDropDown" [value]="program.grantId">{{program.programName}}</option>
+         </select>
+    
+         <div class="text-danger" *ngIf="applicationDetailForm.get('GrantProgram')?.errors && (applicationDetailForm.get('GrantProgram')?.dirty || applicationDetailForm.get('GrantProgram')?.touched )">  
+          <div *ngIf="applicationDetailForm.get('GrantProgram')?.errors?.required">GrantProgram is Required</div>  
+    </div>
+
   </div>
   
 

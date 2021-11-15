@@ -14,6 +14,7 @@ export class AdminreviewprogramComponent implements OnInit {
 
 
    applicantReviews:ReviewModel[]=[];
+   reviews:ReviewModel[]=[];
    p: number = 1;
   constructor(private http:HttpClient,private reviewservice:ReviewserviceService,private toasterservice:ToastrService) { }
 
@@ -31,7 +32,7 @@ export class AdminreviewprogramComponent implements OnInit {
 
     
          this.applicantReviews=response;
-      
+         this.reviews=[...this.applicantReviews];
 
 
       })
@@ -50,6 +51,25 @@ export class AdminreviewprogramComponent implements OnInit {
         this.toasterservice.error(error.error);
         
       })
+  }
+
+  searchField(searchText:any)
+  {
+
+    
+    let filterValue=searchText.target.value.toLowerCase();
+    
+    if(filterValue == "")
+    {
+      this.applicantReviews=this.reviews;
+    }
+    else
+    {
+      this.applicantReviews=this.reviews.filter((x:ReviewModel) => x.applicantName.toLowerCase().includes(filterValue) || x.programCode.toLowerCase().includes(filterValue)
+      || x.country.toLowerCase().includes(filterValue));
+
+    }
+
   }
 
 }

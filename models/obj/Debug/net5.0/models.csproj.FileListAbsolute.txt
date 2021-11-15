@@ -1,18 +1,3 @@
-C:\Users\qbuser\source\repos\POC-GMS\models\bin\Debug\net5.0\models.deps.json
-C:\Users\qbuser\source\repos\POC-GMS\models\bin\Debug\net5.0\models.runtimeconfig.json
-C:\Users\qbuser\source\repos\POC-GMS\models\bin\Debug\net5.0\models.runtimeconfig.dev.json
-C:\Users\qbuser\source\repos\POC-GMS\models\bin\Debug\net5.0\models.dll
-C:\Users\qbuser\source\repos\POC-GMS\models\bin\Debug\net5.0\ref\models.dll
-C:\Users\qbuser\source\repos\POC-GMS\models\bin\Debug\net5.0\models.pdb
-C:\Users\qbuser\source\repos\POC-GMS\models\obj\Debug\net5.0\models.csproj.AssemblyReference.cache
-C:\Users\qbuser\source\repos\POC-GMS\models\obj\Debug\net5.0\models.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\qbuser\source\repos\POC-GMS\models\obj\Debug\net5.0\models.AssemblyInfoInputs.cache
-C:\Users\qbuser\source\repos\POC-GMS\models\obj\Debug\net5.0\models.AssemblyInfo.cs
-C:\Users\qbuser\source\repos\POC-GMS\models\obj\Debug\net5.0\models.csproj.CoreCompileInputs.cache
-C:\Users\qbuser\source\repos\POC-GMS\models\obj\Debug\net5.0\models.dll
-C:\Users\qbuser\source\repos\POC-GMS\models\obj\Debug\net5.0\ref\models.dll
-C:\Users\qbuser\source\repos\POC-GMS\models\obj\Debug\net5.0\models.pdb
-C:\Users\qbuser\source\repos\POC-GMS\models\obj\Debug\net5.0\models.genruntimeconfig.cache
 C:\Nevin Study\POC-GMS\models\bin\Debug\net5.0\models.deps.json
 C:\Nevin Study\POC-GMS\models\bin\Debug\net5.0\models.runtimeconfig.json
 C:\Nevin Study\POC-GMS\models\bin\Debug\net5.0\models.runtimeconfig.dev.json

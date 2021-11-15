@@ -1,5 +1,6 @@
 <div class="appeducationdetails" >
     <h1>Review Applications</h1>
+    <input type="text" placeholder="search any programcode,country,applicantname" class="search" (input)="searchField($event)">
     <div class="container-lg" >
         <div class="table-responsive">
             <div class="table-wrapper">
@@ -24,7 +25,7 @@
                     </thead>
                     <tbody >
                         <ng-container *ngIf="applicantReviews">
-                            <tr  *ngFor="let applicant of applicantReviews | paginate: { itemsPerPage: 5, currentPage: p }">
+                            <tr  *ngFor="let applicant of applicantReviews | paginate: { itemsPerPage: 1, currentPage: p }">
                                 <td>{{applicant.applicantName}}</td>
                                 <td>{{applicant.programCode}}</td>
                                 <td>{{applicant.country}}</td>
